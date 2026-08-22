@@ -1,19 +1,4 @@
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# VS Code
-.vscode/settings.json
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Data
-data/raw-pdfs/*.pdf
-
-# OS
+node_modules
+dist
 .DS_Store
-Thumbs.db
+*.local

@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+  DHD-PEI Design Tokens
+  ---------------------
+  This is the single source of truth for the visual language of the
+  platform. Every future module (Sessions 2-7) should draw its colors,
+  type, spacing and radii from here rather than hard-coding values.
+*/
+
+@theme {
+  /* ---- Color: Archive / Examination Board palette ---- */
+  --color-navy: #0b1f3a;        /* primary — headers, ink, authority */
+  --color-navy-secondary: #123057; /* secondary — panels, sidebar */
+  --color-gold: #d4a017;        /* accent — marks, actives, seals */
+  --color-gold-soft: #e8c463;   /* accent hover / tints */
+  --color-bg: #f8fafc;          /* app background */
+  --color-surface: #ffffff;     /* card / panel surface */
+  --color-border: #e5e7eb;      /* hairlines, rules */
+
+  /* Derived ink / muted tones for text hierarchy */
+  --color-ink: #0b1f3a;
+  --color-ink-muted: #4b5768;
+  --color-ink-faint: #94a0b2;
+
+  /* Status (reserved for future analytics module) */
+  --color-status-positive: #1f7a4d;
+  --color-status-warning: #b5650a;
+  --color-status-critical: #b3261e;
+
+  /* ---- Typography ---- */
+  --font-serif: "IBM Plex Serif", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* ---- Radius scale ---- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* ---- Spacing scale extensions (kept for reference; Tailwind's
+     default spacing scale covers most cases) ---- */
+  --spacing-gutter: 1.5rem;
+  --spacing-section: 4rem;
+
+  /* ---- Shadow: restrained, used sparingly ---- */
+  --shadow-card: 0 1px 2px 0 rgb(11 31 58 / 0.04), 0 1px 3px 0 rgb(11 31 58 / 0.06);
+  --shadow-panel: 0 4px 16px -4px rgb(11 31 58 / 0.12);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    color: var(--color-navy);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-gold-soft);
+    color: var(--color-navy);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Signature texture: a faint millimetre grid, evoking graph paper
+     and the ruled ledgers of an examination archive. Used sparingly
+     as a background wash, never as a busy foreground pattern. */
+  .bg-grid-faint {
+    background-image:
+      linear-gradient(to right, rgb(11 31 58 / 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(11 31 58 / 0.035) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Archive corner ticks — used on KPI / index cards to evoke a
+     specimen card or catalog entry. */
+  .corner-ticks {
+    position: relative;
+  }
+  .corner-ticks::before,
+  .corner-ticks::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-color: var(--color-gold);
+    opacity: 0.9;
+  }
+  .corner-ticks::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--color-gold);
+    border-left: 2px solid var(--color-gold);
+  }
+  .corner-ticks::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--color-gold);
+    border-right: 2px solid var(--color-gold);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

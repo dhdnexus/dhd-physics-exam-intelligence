@@ -1,0 +1,42 @@
+﻿{
+  "collections": [
+    {
+      "name": "DHD PEI Tokens",
+      "modes": [
+        {
+          "name": "Base",
+          "variables": [
+            { "name":"Color/DeepNavy","type":"COLOR","value":"#0B192E"},
+            { "name":"Color/RoyalPurple","type":"COLOR","value":"#6156D2"},
+            { "name":"Color/MutedGold","type":"COLOR","value":"#C8A24A"},
+            { "name":"Color/OffWhite","type":"COLOR","value":"#F8FAFC"},
+            { "name":"Color/SlateBlue","type":"COLOR","value":"#334155"},
+
+            { "name":"Spacing/4","type":"FLOAT","value":4},
+            { "name":"Spacing/8","type":"FLOAT","value":8},
+            { "name":"Spacing/16","type":"FLOAT","value":16},
+            { "name":"Spacing/24","type":"FLOAT","value":24},
+            { "name":"Spacing/32","type":"FLOAT","value":32},
+            { "name":"Spacing/48","type":"FLOAT","value":48},
+            { "name":"Spacing/64","type":"FLOAT","value":64},
+            { "name":"Spacing/80","type":"FLOAT","value":80},
+
+            { "name":"Radius/8","type":"FLOAT","value":8},
+            { "name":"Radius/16","type":"FLOAT","value":16},
+            { "name":"Radius/24","type":"FLOAT","value":24},
+
+            { "name":"Grid/Columns","type":"FLOAT","value":12},
+            { "name":"Grid/Margin","type":"FLOAT","value":80},
+            { "name":"Grid/Gutter","type":"FLOAT","value":24},
+
+            { "name":"Font/H1","type":"STRING","value":"IBM Plex Serif 72"},
+            { "name":"Font/H2","type":"STRING","value":"IBM Plex Serif 48"},
+            { "name":"Font/H3","type":"STRING","value":"Inter 32 SemiBold"},
+            { "name":"Font/Body","type":"STRING","value":"Inter 18 Regular"},
+            { "name":"Font/Caption","type":"STRING","value":"Inter 14 Medium"}
+          ]
+        }
+      ]
+    }
+  ]
+}

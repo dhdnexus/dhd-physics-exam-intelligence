@@ -1,0 +1,179 @@
+:root {
+  --bg: #071b3a;
+  --panel: #0e2a52;
+  --panel2: #16345f;
+  --line: #295087;
+  --gold: #c8a24a;
+  --purple: #6156d2;
+  --white: #f8fafc;
+  --muted: #9db5d8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #04152d;
+  border-right: 1px solid #16345f;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  padding: 28px 18px;
+  border-bottom: 1px solid #16345f;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  color: #071b3a;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.brand h1 {
+  font-size: 18px;
+  font-family: "IBM Plex Serif", serif;
+}
+
+.brand p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nav {
+  padding: 14px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  color: #7ea7e5;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: flex;
+  gap: 14px;
+  transition: 0.2s;
+}
+
+.nav-item:hover {
+  background: #0a2246;
+}
+
+.nav-item.active {
+  background: #102c56;
+  color: white;
+  border-left: 3px solid var(--gold);
+}
+
+.nav-item span {
+  width: 26px;
+  color: #6e93c6;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 18px;
+  color: #5f7da8;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+}
+
+.content {
+  padding: 40px;
+}
+
+.page {
+  max-width: 1080px;
+}
+
+.hero {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 64px;
+  text-align: center;
+}
+
+.hero-logo {
+  width: 126px;
+  height: 126px;
+  border-radius: 50%;
+  background: white;
+  color: #071b3a;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+  font: 700 54px "IBM Plex Serif";
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 0.28em;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font: 700 72px "IBM Plex Serif";
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #d4e1f5;
+  font-size: 22px;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: auto;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 34px;
+  background: var(--purple);
+  color: white;
+  padding: 16px 34px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-title {
+  margin: 54px 0 22px;
+  font: 700 44px "IBM Plex Serif";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #11284a;
+  border: 1px solid #274873;
+  border-radius: 18px;
+  padding: 24px;
+}

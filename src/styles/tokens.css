@@ -1,0 +1,4 @@
+:root{
+--navy:#0B192E;--purple:#6156D2;--gold:#C8A24A;--off:#F8FAFC;--slate:#334155;
+}
+body{margin:0;background:var(--navy);color:var(--off);}

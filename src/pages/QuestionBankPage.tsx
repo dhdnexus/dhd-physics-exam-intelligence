@@ -1,0 +1,1 @@
+export default function QuestionCardPage(){return <main><h1>Question Card</h1></main>}

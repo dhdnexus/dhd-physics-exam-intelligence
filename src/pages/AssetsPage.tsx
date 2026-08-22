@@ -1,0 +1,1 @@
+export default function AssetsPage(){return <main><h1>Content Assets</h1></main>}

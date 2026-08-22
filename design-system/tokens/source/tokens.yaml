@@ -1,0 +1,37 @@
+﻿version: 1.0
+
+colors:
+  deep_navy: "#0B192E"
+  royal_purple: "#6156D2"
+  muted_gold: "#C8A24A"
+  off_white: "#F8FAFC"
+  slate_blue: "#334155"
+
+spacing:
+  4: 4
+  8: 8
+  16: 16
+  24: 24
+  32: 32
+  48: 48
+  64: 64
+  80: 80
+
+radius:
+  sm: 8
+  md: 16
+  lg: 24
+
+grid:
+  columns: 12
+  margin: 80
+  gutter: 24
+
+typography:
+  heading: "IBM Plex Serif"
+  body: "Inter"
+
+project:
+  name: DHD Physics Exam Intelligence
+  short: DHD PEI
+  design_system: "Engineering Documentation Standard"

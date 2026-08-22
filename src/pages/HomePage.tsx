@@ -1,0 +1,1 @@
+export default function CoverPage(){return <main><h1>DHD PEI</h1></main>}

@@ -1,0 +1,1 @@
+export default function WorkedSolutionPage(){return <main><h1>Worked Solution</h1></main>}
